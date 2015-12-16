@@ -2,8 +2,9 @@
 $(document).ready( function() {
   // call masonry-item
   var msnry = new Masonry( '.grid', {
-    columnWidth: 20,
-    itemSelector: '.grid-item'
+    columnWidth: '.grid-sizer',
+    itemSelector: '.grid-item',
+    percentPosition: true
   });
 });
 
@@ -40,7 +41,7 @@ function divMaker(count, classname) {
     grid[0].innerHTML += "<div class=" + classname + "></div>";
 
     // now adjust their width and height
-    div[i].style.width = width + "px";
+    //div[i].style.width = width + "px";
     div[i].style.height = height + "px";
 
     // now let's color them randomly
