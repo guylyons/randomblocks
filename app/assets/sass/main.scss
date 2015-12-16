@@ -36,18 +36,8 @@ body {
   opacity: 1;
 }
 
-.masonry-item {
+.grid-item {
   background: #eee;
-  width: 100px;
-  height: 100px;
-  margin: 1px;
-  float: left;
-}
-
-.test {
-  height: 50px;
-  width: 50px;
-  margin: 3px;
-  background: #eee;
+  width: 20%;
   float: left;
 }
