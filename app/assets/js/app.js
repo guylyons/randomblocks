@@ -1,10 +1,13 @@
+// Wait to load the DOM then run Masonry
 $(document).ready( function() {
   // call masonry-item
   var msnry = new Masonry( '.grid', {
-    columnWidth: 2,
+    columnWidth: 20,
     itemSelector: '.grid-item'
   });
 });
+
+
 		   
 // create an array of random colors
 var colorsArray = randomColor({
@@ -29,8 +32,8 @@ function divMaker(count, classname) {
   for (i = 0; i < count; i ++) {
 
     // keep making random numbers
-    var width = randomNumber(50, 180);
-    var height = randomNumber(50, 180);
+    var width = randomNumber(10, 180);
+    var height = randomNumber(10, 180);
     var color = randomNumber(0,4);
 
     // insert divs into the .grid class for masonry.js
@@ -46,4 +49,4 @@ function divMaker(count, classname) {
 }
 
 // initiate the function
-divMaker(100, "grid-item");
+divMaker(300, "grid-item");
