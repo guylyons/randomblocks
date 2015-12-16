@@ -1,0 +1,25 @@
+{
+  "name": "randomBlocks",
+  "description": "Creates random array of colored divs",
+  "main": "index.js",
+  "authors": [
+    "Guy Lyons <guylyons2@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "http://www.chicken3000.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "typographic": "~2.9.3",
+    "normalize-css": "normalize.css#~3.0.3",
+    "masonry-layout": "~1.0.3",
+    "jquery": "~2.1.4",
+    "randomcolor": "~0.4.1"
+  }
+}
