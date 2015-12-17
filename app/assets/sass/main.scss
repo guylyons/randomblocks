@@ -43,6 +43,7 @@ body {
 .grid-sizer,
 .grid-item {
   width: 10%;
+  transition: all 1s;
 }
 
 .grid-item--width2 {
@@ -59,5 +60,5 @@ body {
 }
 
 .grid-toggle {
-  width: 50%;
+  transform: rotate(45deg);
 }

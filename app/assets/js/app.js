@@ -8,6 +8,7 @@ $(document).ready( function() {
   });
 });
 
+var gridItems = document.getElementsByClassName("grid-item");
 
 // create an array of random colors
 var colorsArray = randomColor({
@@ -54,3 +55,15 @@ function divMaker(count, classname) {
 
 // initiate the function
 divMaker(300, "grid-item");
+
+console.log(gridItems.length);
+
+// add some clickable fun
+var addClass = function() {
+  this.classList.toggle('grid-toggle');
+};
+
+for (i = 0; i < gridItems.length; i++) {
+  gridItems[i].addEventListener('click', addClass, false);
+}
+
