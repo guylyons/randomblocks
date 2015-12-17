@@ -8,21 +8,20 @@ $(document).ready( function() {
   });
 });
 
-var gridItems = document.getElementsByClassName("grid-item");
+// begin randomBlocks app
 
-// create an array of random colors
-var colorsArray = randomColor({
-  count: 5 // let's use a maxium of 5...
-});
+var randomBlocksApp = randomBlocksApp || {};
 
-
-// generate random numbers with min and max values
-function randomNumber(min, max) {
+randomBlocksApp.randomNumber = function(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
-}
+};
 
-function divMaker(count, classname) {
-
+randomBlocksApp.divMaker = function(count, classname) {
+  
+  // create an array of random colors
+  var colorsArray = randomColor({
+    count: 5 // let's use a maxium of 5...
+  });
   // these are the classes to access that each div will be assigned
   var div = document.getElementsByClassName(classname);
 
@@ -35,9 +34,9 @@ function divMaker(count, classname) {
   for (i = 0; i < count; i ++) {
 
     // keep making random numbers
-    var width = randomNumber(0, 3);
-    var height = randomNumber(20, 180);
-    var color = randomNumber(0,4);
+    var width = this.randomNumber(0, 3);
+    var height = this.randomNumber(20, 180);
+    var color = this.randomNumber(0,4);
 
     // insert divs into the .grid class for masonry.js
     grid[0].innerHTML += "<div class=" + classname + "></div>";
@@ -51,19 +50,8 @@ function divMaker(count, classname) {
     // now let's color them randomly
     div[i].style.backgroundColor = randomColor(color);
   }
-}
-
-// initiate the function
-divMaker(300, "grid-item");
-
-console.log(gridItems.length);
-
-// add some clickable fun
-var addClass = function() {
-  this.classList.toggle('grid-toggle');
 };
 
-for (i = 0; i < gridItems.length; i++) {
-  gridItems[i].addEventListener('click', addClass, false);
-}
+// initiate the function
+randomBlocksApp.divMaker(300, "grid-item");
 

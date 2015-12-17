@@ -60,5 +60,7 @@ body {
 }
 
 .grid-toggle {
-  transform: rotate(45deg);
+  width: 50%;
+  z-index: 90;
+  transition: all 1s;
 }
