@@ -24,6 +24,10 @@ body {
   font-family: $helvetica;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .intro-article {
   padding: 3rem;
   margin: 3rem;
@@ -43,9 +47,10 @@ body {
 
 .grid-item--width2 {
   width: 40%;
-  height: 200px!important;
+  min-height: 100vh;
   color: white;
-  font-size: 3em;
+  font-size: 1.3em;
+  padding: 0 1em 0 1em;
 }
 
 @keyframes rotate {
