@@ -9,13 +9,11 @@ $(document).ready( function() {
 });
 
 
-		   
 // create an array of random colors
 var colorsArray = randomColor({
   count: 5 // let's use a maxium of 5...
 });
 
-var grid = document.getElementsByClassName('grid');
 
 // generate random numbers with min and max values
 function randomNumber(min, max) {
@@ -29,19 +27,24 @@ function divMaker(count, classname) {
 
   // this is the class to access for masonry grid
   var grid = document.getElementsByClassName('grid');
+
+  // a few values for possible widths
+  var widthArray = [10, 20, 60];
   
   for (i = 0; i < count; i ++) {
 
     // keep making random numbers
-    var width = randomNumber(10, 180);
-    var height = randomNumber(10, 180);
+    var width = randomNumber(0, 3);
+    var height = randomNumber(20, 180);
     var color = randomNumber(0,4);
 
     // insert divs into the .grid class for masonry.js
     grid[0].innerHTML += "<div class=" + classname + "></div>";
 
     // now adjust their width and height
-    //div[i].style.width = width + "px";
+
+    //div[i].style.width = widthArray[width] + "%";
+
     div[i].style.height = height + "px";
 
     // now let's color them randomly

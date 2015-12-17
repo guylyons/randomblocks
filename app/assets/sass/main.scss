@@ -38,11 +38,21 @@ body {
 
 .grid-sizer,
 .grid-item {
-  width: 25%;
+  width: 10%;
 }
 
 .grid-item--width2 {
-  width: 50%;
+  width: 40%;
+  height: 200px!important;
   color: white;
   font-size: 3em;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(180deg)}
+}
+
+.grid-toggle {
+  width: 50%;
 }
