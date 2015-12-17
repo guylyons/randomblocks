@@ -22,13 +22,14 @@ randomBlocksApp.divMaker = function(count, classname) {
   var colorsArray = randomColor({
     count: 5 // let's use a maxium of 5...
   });
-  // these are the classes to access that each div will be assigned
+  
+  // the classes that each div will be assigned
   var div = document.getElementsByClassName(classname);
 
-  // this is the class to access for masonry grid
+  // class to access for masonry grid
   var grid = document.getElementsByClassName('grid');
 
-  // a few values for possible widths
+  // possible widths
   var widthArray = [10, 20, 60];
   
   for (i = 0; i < count; i ++) {
@@ -38,16 +39,12 @@ randomBlocksApp.divMaker = function(count, classname) {
     var height = this.randomNumber(20, 180);
     var color = this.randomNumber(0,4);
 
-    // insert divs into the .grid class for masonry.js
+    // insert divs between .grid class
     grid[0].innerHTML += "<div class=" + classname + "></div>";
 
-    // now adjust their width and height
-
     //div[i].style.width = widthArray[width] + "%";
-
+    
     div[i].style.height = height + "px";
-
-    // now let's color them randomly
     div[i].style.backgroundColor = randomColor(color);
   }
 };
